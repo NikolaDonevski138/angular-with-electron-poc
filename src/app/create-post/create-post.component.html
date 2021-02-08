@@ -1,0 +1,14 @@
+<h1>Create your Blog !</h1>
+<div class="blog-container">
+      <form>
+        <input placeholder="Enter title of your blog post" type="text" #title/>
+        <input placeholder="Write your blog!" type="text" #message/>
+        <button (click)="onCreateBlogPost($event)">Create Blog</button>
+      </form>
+      <p style="color:red;">
+        {{emptyFieldsMessage}}
+      </p>
+      <p style="color:green;">
+        {{messageOfResponse}}
+      </p>
+</div>

@@ -1,0 +1,8 @@
+<div style="padding:13px;">
+    <div *ngIf="photos.length === 0; else table">Loading...</div>
+    <ng-template #table>
+        <button class="btn" (click)="nextPage()">Next</button>
+        <button class="btn" style="margin-left:10px;" (click)="previousPage()">Previous</button>
+        <app-home-list-item *ngFor="let photo of photos" [photoData]="photo"></app-home-list-item>
+    </ng-template>
+</div>

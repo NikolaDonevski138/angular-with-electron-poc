@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    justify-content: space-between;
+    background-color:cadetblue;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.recipe-book-container {
+    display:flex;
+
+}
+
+.recipes {
+    margin-left: 50px;
+}
+
+.shopping_list {
+    margin-left: 50px;
+}
+
+
+
+.manage{
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        height: 100px;
+    }
+    .recipe-book-container {
+        display:flex;
+        flex-direction: column;
+        height:100%;
+    }
+    .recipes {
+        margin-left: 0px;
+    }
+    
+    .shopping_list {
+        margin-left: 0px;
+    }
+    .manage-container{
+        height:100%;
+    }
+    .manage {
+        align-self: flex-end;
+        align-self: flex-end;
+    }
+  }
