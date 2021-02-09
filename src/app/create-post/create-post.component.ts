@@ -11,12 +11,23 @@ export class CreatePostComponent {
   @ViewChild('title') title: any;
   @ViewChild ('message') message: any;
   emptyFieldsMessage: any;
-  messageOfResponse: any;
 
-  //ElementRef causes typescript problem need to make research
+  //typescript problem with different type of any.. 
 
-  constructor(private blogPostService:BlogPostService) { 
+
+  constructor(private blogPostService: BlogPostService) { 
   }
+
+
+  createDesktopNotification(textToShow:string){
+    const options = {
+      body: `${textToShow} !`
+    };
+
+    new Notification('Information About your blog post: ', options);
+
+  }
+
 
 
   onCreateBlogPost(event:any){
@@ -27,14 +38,13 @@ export class CreatePostComponent {
       this.emptyFieldsMessage = '';
       this.blogPostService.createPost(title,message).subscribe(data => {
         if(data.hasOwnProperty('userId')){
-        this.messageOfResponse = 'your post was successfully created';
+        this.createDesktopNotification('your post was successfully created')
       } else {
-        this.messageOfResponse = 'please try again';
+        this.createDesktopNotification('your post was not successfull please try again')
       }
     })
    } else {
     this.emptyFieldsMessage = 'please enter your title and blog post';
-    this.messageOfResponse = ''
   }
   }
 

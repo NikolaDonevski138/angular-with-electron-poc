@@ -1,0 +1,17 @@
+	<div class="form-container">
+        <div class="form">
+		    <!-- <Image src="~/images/logo.png"></Image> -->
+		    <div>
+                <input type="email" placeholder="Email Address" required autocomplete="off" #email/>
+                <input type="password" placeholder="Password" style="margin-top: 10px;" required  autocomplete="off" #password/>
+		    </div>
+            <div>
+                <Button class="submitButton" (click)="submit()">
+                    {{submitFormText}}
+                </Button>
+		        <Button class="changeLogInLogOutButton"  (click)="toggleDisplay()"> {{changeSignInOrSignUpText}} </Button>
+            </div>
+        </div>
+    </div>
+    <!-- [text]="isLoggingIn ? 'Sign in' : 'Sign up'"
+    [text]="isLoggingIn ? 'Sign up' : 'Back to login'" -->

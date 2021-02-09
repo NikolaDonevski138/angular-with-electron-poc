@@ -11,7 +11,7 @@ export class HomeListComponent implements OnInit {
   pageNumber = 1;
   constructor(private jsonPlaceholderService:JsonPlaceholderServiceService) { }
 
-  getRequestHelper(pageNum: number){
+  getRequestHelper(pageNum: number): void{
     this.jsonPlaceholderService.sendGetRequest(pageNum).subscribe((data: any)=> {
       this.photos = data
     })
@@ -21,7 +21,7 @@ export class HomeListComponent implements OnInit {
     this.getRequestHelper(this.pageNumber);
   }
 
-  nextPage(){
+  nextPage(): void{
     this.pageNumber++
     this.getRequestHelper(this.pageNumber);
   }

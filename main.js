@@ -1,6 +1,7 @@
 const {
     app,
-    BrowserWindow
+    BrowserWindow,
+    Notification
   } = require('electron')
   const url = require("url");
   const path = require("path");
@@ -32,7 +33,7 @@ const {
       appWindow = null
     })
   }
-  
+
   app.on('ready', initWindow)
   
   // Close when all windows are closed.
