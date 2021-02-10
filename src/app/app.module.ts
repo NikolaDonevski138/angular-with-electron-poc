@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { Routes, RouterModule,Router } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { HomeListComponent } from './home/home-list/home-list.component';
-import { HomeListItemComponent } from './home/home-list/home-list-item/home-list-item.component';
-import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './core/header/header.component';
+import { HomeComponent } from './main/home/home.component';
+import { CreatePostComponent } from './main/create-post/create-post.component';
+import { HomeListComponent } from './main/home/home-list/home-list.component';
+import { HomeListItemComponent } from './main/home/home-list/home-list-item/home-list-item.component';
+import { LoginComponent } from './main/login/login.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'login', pathMatch:'full'},
-  { path:'login', component: LoginComponent },
-  { path:'home', component: HomeComponent },
-  { path:'create-post' , component:CreatePostComponent}
-]
-   
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'create-post', component: CreatePostComponent },
+];
 
 @NgModule({
   declarations: [
@@ -34,9 +33,9 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

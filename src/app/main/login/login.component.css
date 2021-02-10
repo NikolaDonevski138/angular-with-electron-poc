@@ -1,0 +1,50 @@
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-image: url("../../../assets/backgroundImg.jpg");
+}
+
+.form {
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: linear-gradient(#e66465, #9198e5);
+  justify-content: space-between;
+}
+
+input[type="email"],
+input[type="password"] {
+  display: block;
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+}
+
+input[type="email"],
+input[type="password"]:focus {
+  outline: none;
+}
+
+.submitButton {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: #e66465;
+}
+
+.changeLogInLogOutButton {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  color: black;
+  border: none;
+  background-color: transparent;
+}

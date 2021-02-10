@@ -1,0 +1,29 @@
+<div class="form-container">
+  <div class="form">
+    <div>
+      <input
+        type="email"
+        placeholder="Email Address"
+        required
+        autocomplete="off"
+        #email
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        style="margin-top: 10px"
+        required
+        autocomplete="off"
+        #password
+      />
+    </div>
+    <div>
+      <Button class="submitButton" (click)="submit()">
+        {{ submitFormText }}
+      </Button>
+      <Button class="changeLogInLogOutButton" (click)="toggleDisplay()">
+        {{ changeSignInOrSignUpText }}
+      </Button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="blog-container">
+  <form class="form">
+    <input
+      type="text"
+      name="name"
+      class="question"
+      id="nme"
+      required
+      autocomplete="off"
+      #title
+    />
+    <label for="nme"><span>Title of blogpost</span></label>
+    <textarea
+      name="message"
+      rows="2"
+      class="question"
+      id="msg"
+      required
+      autocomplete="off"
+      #message
+    ></textarea>
+    <label for="msg"><span>Write your blogpost</span></label>
+    <p style="color: red">{{ emptyFieldsMessage }}</p>
+    <button class="btn" (click)="onCreateBlogPost($event)">Create Blog</button>
+  </form>
+</div>
