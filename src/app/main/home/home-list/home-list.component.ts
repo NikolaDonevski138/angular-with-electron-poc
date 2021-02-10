@@ -27,7 +27,6 @@ export class HomeListComponent implements OnInit {
   nextPage(): void {
     this.pageNumber++;
     this.getRequestHelper(this.pageNumber);
-    console.log(this.photos);
   }
 
   previousPage() {

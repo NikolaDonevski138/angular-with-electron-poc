@@ -24,12 +24,9 @@ export class LoginComponent implements OnInit {
     this.user = new User('', '');
   }
 
-  ngOnInit() {
-    //this.page.actionBarHidden = true;
-  }
+  ngOnInit() {}
 
   submit() {
-    console.log('vlegvit');
     if (this.isLoggingIn) {
       this.login();
     } else {
@@ -42,7 +39,6 @@ export class LoginComponent implements OnInit {
       this.email.nativeElement.value,
       this.password.nativeElement.value
     );
-    console.log(this.user.email, this.user.password, 'testtt');
     this.userService.login(this.user).subscribe(
       () => this.router.navigate(['home']),
       (exception) => {
@@ -72,11 +68,6 @@ export class LoginComponent implements OnInit {
   }
 
   toggleDisplay() {
-    console.log(
-      'dali se vikat ova',
-      this.isLoggingIn,
-      this.changeSignInOrSignUpText
-    );
     this.isLoggingIn = !this.isLoggingIn;
     this.submitFormText = this.isLoggingIn ? 'Sign in' : 'Sign up';
     this.changeSignInOrSignUpText = this.isLoggingIn

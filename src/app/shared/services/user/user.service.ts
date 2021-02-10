@@ -54,7 +54,6 @@ export class UserService {
   }
 
   handleErrors(error: Response) {
-    console.log(JSON.stringify(error));
     return throwError(error);
   }
 }
