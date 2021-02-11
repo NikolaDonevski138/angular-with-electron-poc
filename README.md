@@ -10,7 +10,7 @@ Usefull link:
 
 # Main Process
 
-i wrote main process into main.js this file is node.js file which include electron framework. This file is consist of some methods and functions.
+i wrote main process into <b>main.js</b> this file is node.js file which include electron framework. This file is consist of some methods and functions.
 
 - Imported several objects from electron and node js core modules like(url and path).
 - Line 7 is a function who initialize how sholuld big screen size of desktop app should be with help of BrowserWindow object from electron, in webPreferences with nodeIntegration: true, i give access to Renderer process to use native api and electron features from electron framework to Angular app.
