@@ -15,7 +15,7 @@ export class UserService {
       .post(
         Config.apiUrl + 'user/' + Config.appKey + '/login',
         JSON.stringify({
-          username: user.email,
+          username: user.username,
           password: user.password,
         }),
         { headers: this.getCommonHeaders() }
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   register(user: User) {
-    if (!user.email || !user.password) {
+    if (!user.username || !user.password) {
       return throwError('Please provide both an email address and password.');
     }
 
@@ -37,8 +37,8 @@ export class UserService {
       .post(
         Config.apiUrl + 'user/' + Config.appKey,
         JSON.stringify({
-          username: user.email,
-          email: user.email,
+          username: user.username,
+          email: user.username,
           password: user.password,
         }),
         { headers: this.getCommonHeaders() }

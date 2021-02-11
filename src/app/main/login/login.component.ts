@@ -11,7 +11,7 @@ import { UserService } from '../../shared/services/user/user.service';
   templateUrl: './login.component.html',
 })
 export class LoginComponent implements OnInit {
-  @ViewChild('email') email: any;
+  @ViewChild('username') username: any;
   @ViewChild('password') password: any;
   user: User;
   isLoggingIn = true;
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.user = new User(
-      this.email.nativeElement.value,
+      this.username.nativeElement.value,
       this.password.nativeElement.value
     );
     this.userService.login(this.user).subscribe(
@@ -52,6 +52,10 @@ export class LoginComponent implements OnInit {
   }
 
   signUp() {
+    this.user = new User(
+      this.username.nativeElement.value,
+      this.password.nativeElement.value
+    );
     this.userService.register(this.user).subscribe(
       () => {
         alert('Your account was successfully created.');

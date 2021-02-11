@@ -19,14 +19,14 @@
   justify-content: space-between;
 }
 
-input[type="email"],
+input[type="text"],
 input[type="password"] {
   display: block;
   padding: 10px 0px 10px 0px;
   width: 100%;
 }
 
-input[type="email"],
+input[type="text"],
 input[type="password"]:focus {
   outline: none;
 }
